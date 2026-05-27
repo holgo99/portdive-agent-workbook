@@ -57,7 +57,7 @@ The workbook organically implements the three-layer personal knowledge base arch
 * **📥 The Library (`ingest/` & `briefings/`)**: Represents our immutable ground-truth. The `ingest/` directory serves as the initial, gitignored landing zone for supply-chain assets, raw PDFs, and briefings. Once processed, they are converted into immutable local briefings (e.g., `briefings/2026_q2/`) and linked relatively.
 * **💖 The Engine (`theses/`)**: Long-form narrative thesis files (`theses/<slug>/THESIS.md`) act as persistent, compounding entity pages. They compile qualitative and quantitative research once and keep it current, rather than forcing the agent to re-derive knowledge from raw text at query time.
 * **⚖️ The Government (`portfolio/` & `CHANGELOG.md`)**: `CHANGELOG.md` acts as the append-only, chronological log of accomplishments. The `portfolio/` namespace acts as our dynamic, content-oriented index, tracking allocations (`portfolio/PORTFOLIO.md`), portfolio-level aggregates (`portfolio/PORTFOLIO_ANALYSIS.md`), currency bands (`portfolio/RISK_MATRIX.md`), and risk overrides (`portfolio/PORTFOLIO_LOG.md`).
-* **🛠️ The Hands (Tooling & Integration)**: The Python sync toolkit (`scripts/`) and local `pd` CLI act as our custom programmatic search, scaffolding, and database-synchronization engine, communicating with the PortDive MCP server.
+* **🛠️ The Hands (Tooling & Integration)**: The Python sync toolkit (`scripts/`) and local `pd` CLI act as our custom programmatic search, scaffolding, and database-synchronization engine, communicating with the PortDive Ecosystem.
 
 ---
 

@@ -1,3 +1,29 @@
+```ascii 
+                          
+                      ########                      
+                    ############                    
+                   ##############                   
+                  ################                  
+                  ################                  
+                   ###############                  
+                    ##  #########                   
+                    #############                   
+                    #############                   
+                   ###############                  
+  #              ###################             #  
+ ##            #######################           ## 
+###        ######## ############### ######       ###
+ ################ ##### ############# ############# 
+  ###########   ########### ##### #####   #######   
+       ##     ###### #####   ##### #####    ###     
+      ##     #### ######      ####   ####    ##     
+      ###   #########         #####   ####  ###     
+        ########               ####    ######       
+            ###        #       ###     ###          
+              ##        #     ####    ###           
+                         #######
+```
+
 # PortDive Workbook: Architectural Blueprint & Decisions (Human Reference)
 
 This repository serves as the **durable, collaborative investment-research workbook** for the PortDive ecosystem. It is a version-controlled journal and capital ledger designed to drive research, narrative drafting, and risk-management across all active investment theses.
@@ -15,22 +41,22 @@ The workbook organically implements the three-layer personal knowledge base arch
 
 ```
                       ┌──────────────────────────────────────────┐
-                      │          THE SCHEMA LAYER (🧠)           │
+                      │              THE BRAIN (🧠)              │
                       │         AGENTS.md, agents/doctrine/*     │
                       └────────────────────┬─────────────────────┘
                                            │ Enforces Rules & Workflows
                                            ▼
      ┌──────────────────────┐    ┌──────────────────┐    ┌─────────────────────────┐
-     │   RAW SOURCES (📥)   │    │  THE WIKI (💖)   │    │    THE INDEX/LOG (⚖️)    │
+     │   THE LIBRARY (📥)   │    │  THE ENGINE (💖) │    │   THE GOVERNMENT (⚖️)   │
      │ Ingested Assets &    │───>│ theses/<slug>/   │───>│ CHANGELOG.md,           │
      │ Immutable Briefings  │    │ THESIS.md        │    │ portfolio/PORTFOLIO.md  │
      └──────────────────────┘    └──────────────────┘    └─────────────────────────┘
 ```
 
-* **🧠 The Schema Layer (`AGENTS.md` & `agents/`)**: Includes the root-level [AGENTS.md](AGENTS.md), [agents/ONBOARDING.md](agents/ONBOARDING.md), and individual doctrines (e.g., `boil-the-ocean.md`, `beyond-the-wiki-roadmap.md`). These serve as the AI's core instructions, forcing absolute research quality, maintaining baseline macro consistency, and preventing "vibe-scoring" in favor of strict mathematical confidence rubrics.
-* **📥 Raw Sources (`ingest/` & `briefings/`)**: Represents our immutable ground-truth. The `ingest/` directory serves as the initial, gitignored landing zone for supply-chain assets, raw PDFs, and briefings. Once processed, they are converted into immutable local briefings (e.g., `briefings/2026_q2/`) and linked relatively.
-* **💖 The Wiki (`theses/`)**: Long-form narrative thesis files (`theses/<slug>/THESIS.md`) act as persistent, compounding entity pages. They compile qualitative and quantitative research once and keep it current, rather than forcing the agent to re-derive knowledge from raw text at query time.
-* **⚖️ The Index and Log (`CHANGELOG.md` & `portfolio/`)**: `CHANGELOG.md` acts as the append-only, chronological log of accomplishments. The `portfolio/` namespace acts as our dynamic, content-oriented index, tracking allocations (`portfolio/PORTFOLIO.md`), portfolio-level aggregates (`portfolio/PORTFOLIO_ANALYSIS.md`), currency bands (`portfolio/RISK_MATRIX.md`), and risk overrides (`portfolio/PORTFOLIO_LOG.md`).
+* **🧠 The Brain (`AGENTS.md` & `agents/`)**: Includes the root-level [AGENTS.md](AGENTS.md), [agents/ONBOARDING.md](agents/ONBOARDING.md), and individual doctrines (e.g., `boil-the-ocean.md`, `beyond-the-wiki-roadmap.md`). These serve as the AI's core instructions, forcing absolute research quality, maintaining baseline macro consistency, and preventing "vibe-scoring" in favor of strict mathematical confidence rubrics.
+* **📥 The Library (`ingest/` & `briefings/`)**: Represents our immutable ground-truth. The `ingest/` directory serves as the initial, gitignored landing zone for supply-chain assets, raw PDFs, and briefings. Once processed, they are converted into immutable local briefings (e.g., `briefings/2026_q2/`) and linked relatively.
+* **💖 The Engine (`theses/`)**: Long-form narrative thesis files (`theses/<slug>/THESIS.md`) act as persistent, compounding entity pages. They compile qualitative and quantitative research once and keep it current, rather than forcing the agent to re-derive knowledge from raw text at query time.
+* **⚖️ The Government (`portfolio/` & `CHANGELOG.md`)**: `CHANGELOG.md` acts as the append-only, chronological log of accomplishments. The `portfolio/` namespace acts as our dynamic, content-oriented index, tracking allocations (`portfolio/PORTFOLIO.md`), portfolio-level aggregates (`portfolio/PORTFOLIO_ANALYSIS.md`), currency bands (`portfolio/RISK_MATRIX.md`), and risk overrides (`portfolio/PORTFOLIO_LOG.md`).
 * **🛠️ The Hands (Tooling & Integration)**: The Python sync toolkit (`scripts/`) and local `pd` CLI act as our custom programmatic search, scaffolding, and database-synchronization engine, communicating with the PortDive MCP server.
 
 ---
